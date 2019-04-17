@@ -1,6 +1,7 @@
 ## Install & Start
 
 ```
+php artisan key:generate
 make start
 make install
 make watch
