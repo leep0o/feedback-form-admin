@@ -1,5 +1,5 @@
 install:
-	composer install && npm i && php artisan migrate --seed
+	composer install && npm i && php artisan migrate:refresh --seed
 
 start:
 	docker-compose up --build
@@ -15,3 +15,6 @@ serve:
 
 share:
 	valet start && valet share
+
+test:
+	vendor/bin/phpunit

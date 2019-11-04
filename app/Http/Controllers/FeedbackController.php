@@ -60,7 +60,7 @@ class FeedbackController extends Controller
         \DB::beginTransaction();
 
         $feedback = Feedback::create($request->all());
-        $admin = User::find(1);
+        $admin = User::firstOrFail();
 
         if(auth()->check()){
             $user = auth()->user();

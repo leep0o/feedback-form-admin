@@ -147,7 +147,8 @@
     export default {
         name: 'FeedbackForm',
         components: {
-            FilePond, VueRecaptcha
+          FilePond,
+          VueRecaptcha
         },
         props: {
             route: {
@@ -198,7 +199,7 @@
 
                 this.axios
                     .post(this.route, fd, config)
-                    .then(response => {
+                    .then(() => {
                         this.loading = false
                         this.showForm = false
                         this.$refs.pond.removeFiles()
